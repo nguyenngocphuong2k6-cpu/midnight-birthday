@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Midnight Birthday</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster:wght@400;700;800&family=ABeeZee&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- BACKGROUND -->
+
+    <div class="galaxy-bg">
+      <div class="stars-layer"></div>
+
+      <div class="dynamic-stars"></div>
+    </div>
+
+    <!-- WELCOME SCREEN -->
+
+    <section class="welcome-screen" id="welcomeScreen">
+      <h1 class="main-title">Midnight Birthday</h1>
+
+      <p class="subtitle">🌸 Có vài điều nhỏ bé muốn gửi đến Thảo Nguyên...</p>
+
+      <button id="startBtn">Chạm để bắt đầu</button>
+    </section>
+
+    <!-- MAIN SKY -->
+
+    <section class="sky hidden" id="sky">
+      <div class="moon-zone">
+        <div class="moon hidden" id="moon"></div>
+      </div>
+
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+
+      <!-- SPECIAL STAR -->
+
+      <div class="special-star hidden" id="specialStar">🌟</div>
+    </section>
+
+    <!-- BIRTHDAY MESSAGE -->
+
+    <div class="birthday-card hidden" id="birthdayCard">
+      <div class="cake">🎂</div>
+
+      <h2>Chúc mừng sinh nhật Thảo Nguyên</h2>
+
+      <p>Mong mọi điều tốt đẹp sẽ luôn đến với mày nhá 👉👈</p>
+    </div>
+
+    <!-- POPUP -->
+
+    <div class="popup hidden" id="popup">
+      <div class="popup-content">
+        <p id="popupText"></p>
+      </div>
+    </div>
+
+    <!-- BUTTON F3 -->
+
+    <div class="memory-btn friends-btn hidden" id="friendsBtn">📸</div>
+
+    <!-- BUTTON QUOTES -->
+
+    <div class="memory-btn quotes-btn hidden" id="quotesBtn">💌</div>
+
+    <!-- FRIENDS GALLERY -->
+
+    <div class="gallery hidden" id="friendsGallery">
+      <div class="gallery-title">Những khoảnh khắc của F3 tẻn tẻn ✨</div>
+
+      <img src="images/F3-1.jpg" class="friends-image active" />
+      <img src="images/F3-2.jpg" class="friends-image" />
+      <img src="images/F3-3.jpg" class="friends-image" />
+    </div>
+
+    <!-- QUOTES GALLERY -->
+
+    <div class="gallery hidden" id="quotesGallery">
+      <div class="gallery-title">Những lời chúc dành cho mày 💌</div>
+
+      <img src="images/dont-worry.jpg" class="quote-image active" />
+      <img src="images/quote-heart.jpg" class="quote-image" />
+      <img src="images/you-can.jpg" class="quote-image" />
+    </div>
+
+    <!-- AUDIO -->
+
+    <audio id="birthdayMusic" src="music/happy-bd.mp3"></audio>
+
+    <audio id="imageMusic" src="music/music-image.mp3"></audio>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+  </body>
+</html>
