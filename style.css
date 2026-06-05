@@ -394,11 +394,14 @@ button:hover {
 .gallery {
   position: fixed;
   inset: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   background: rgba(0, 0, 0, 0.82);
   backdrop-filter: blur(12px);
+
   z-index: 99999;
   overflow: hidden;
 }
@@ -430,8 +433,6 @@ button:hover {
   transform: scale(0.9);
 
   transition: all 0.8s ease;
-
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15), 0 0 60px rgba(249, 168, 212, 0.2);
 }
 
 .friends-image.active,
@@ -440,12 +441,33 @@ button:hover {
   transform: translate(-50%, -50%) scale(1);
 }
 
+.gallery::before {
+  content: "";
+
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  max-width: 90vw;
+  max-height: 85vh;
+
+  border-radius: 30px;
+
+  background: linear-gradient(135deg, #ffd6e7, #ffe4f1, #fff0f7);
+
+  box-shadow: 0 0 30px rgba(255, 182, 217, 0.8), 0 0 80px rgba(255, 105, 180, 0.4);
+
+  z-index: -1;
+}
+
 /* GALLERY TITLE */
 
 .gallery-title {
   position: absolute;
 
-  top: 40px;
+  top: 60px;
+  z-index: 999999;
 
   font-size: 2.5rem;
 
@@ -730,6 +752,7 @@ button:hover {
   }
 
   .gallery-title {
+    top: 60px;
     font-size: 1.4rem;
     padding: 0 20px;
   }

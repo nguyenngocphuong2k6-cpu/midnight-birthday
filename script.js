@@ -27,6 +27,9 @@ const quotesGallery = document.getElementById("quotesGallery");
 const friendImages = document.querySelectorAll(".friends-image");
 const quoteImages = document.querySelectorAll(".quote-image");
 
+let galleryInterval;
+let currentImage = 0;
+
 /* START WEBSITE */
 startBtn.addEventListener("click", () => {
   welcomeScreen.classList.add("hidden");
@@ -151,26 +154,18 @@ const icons = ["⭐", "💖", "🌸", "✨", "🌙", "💕", "☁️"];
 allStars.forEach((star) => {
   let valid = false;
 
-  while (!valid) {
-    const randomTop = Math.random() * 70 + 10;
-    const randomLeft = Math.random() * 80 + 5;
+  let randomTop;
+  let randomLeft;
 
-    // Tạm gán vị trí
-    star.style.top = randomTop + "%";
-    star.style.left = randomLeft + "%";
+  do {
+    randomTop = Math.random() * 75 + 5;
+    randomLeft = Math.random() * 85 + 5;
 
-    const starRect = star.getBoundingClientRect();
-    const moonRect = moon.getBoundingClientRect();
+    // chừa vùng mặt trăng
+  } while (randomTop < 35 && randomLeft > 65);
 
-    // khoảng đệm thêm quanh mặt trăng
-    const padding = 80;
-
-    const overlap = starRect.right > moonRect.left - padding && starRect.left < moonRect.right + padding && starRect.bottom > moonRect.top - padding && starRect.top < moonRect.bottom + padding;
-
-    if (!overlap) {
-      valid = true;
-    }
-  }
+  star.style.top = randomTop + "%";
+  star.style.left = randomLeft + "%";
 
   star.style.fontSize = Math.random() * 25 + 25 + "px";
 
